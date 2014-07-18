@@ -1,0 +1,6 @@
+<h1>Welcome user: <%= @current_user.username %><h1>
+<% if admin? %>
+  <h2>Admin menu</h2>
+<% end %>
+<h2>Blog entries<h2>
+<%= render "articles" %>

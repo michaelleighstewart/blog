@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>My Website</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="divHeader" class="header">
+  <a href="/blog/">Blog</a>
+</div>
 
 <%= yield %>
 
+<div id="divFooter" class="footer">
+  Created by Michael Stewart, 2014
+</div>
 </body>
 </html>
