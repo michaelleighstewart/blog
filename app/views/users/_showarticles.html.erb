@@ -1,0 +1,8 @@
+<p>Show blogs here for user <%= @current_user.username %></p>
+<% @current_user.articles.each do |a| %>
+  <p>
+    <%= a.title %><br />
+    <%= link_to 'Show', article_path(a) %>
+    <%= link_to 'Edit', edit_article_path(a) %> 
+  </p>
+<% end %>

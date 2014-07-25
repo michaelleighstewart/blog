@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140718) do
 
   create_table "articles", force: true do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.string   "body"
     t.datetime "created_at"

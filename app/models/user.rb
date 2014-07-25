@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :blogs
+  has_many :articles, :dependent => :destroy
 
   attr_accessor :password
   validates :password, :confirmation => true

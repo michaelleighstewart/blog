@@ -41,7 +41,10 @@ def blogs
     @user = User.new
   end
 
-  def show
+
+  def logout
+    session[:user_id] = nil
+    redirect_to :action => 'login'
   end
 
   def user_params

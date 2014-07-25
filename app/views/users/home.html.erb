@@ -1,6 +1,11 @@
-<h1>Welcome user: <%= @current_user.username %><h1>
-<% if admin? %>
-  <h2>Admin menu</h2>
-<% end %>
-<h2>Blog entries<h2>
-<%= render "articles" %>
+<div id="divHome" class="home">
+  <div id="divWelcome" class="welcome">
+    <h1>Welcome user: <%= @current_user.username %><h1>
+  </div>
+  <% if admin? %>
+    <h2>Admin menu</h2>
+  <% end %>
+  <h2>Blog entries<h2>
+  <%= render "showarticles" %>
+  <a href="/articles/new/">New Article</a>
+</div>
